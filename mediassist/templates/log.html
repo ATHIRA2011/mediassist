@@ -1,0 +1,23 @@
+{% load static %}
+<link rel="stylesheet"href="{% static 'css/log.css' %}">
+<section class="login-form-wrap">
+  <h1>SIGN IN</h1>
+  <form method="POST">
+    {% csrf_token %}
+     <h2 style="color: red;">{{error}}</h2>
+    <label>
+      <input type="email" name="email" required placeholder="Email">
+    </label>
+    <br>
+    <br>
+
+    <label>
+      <input type="password" name="password" required placeholder="Password">
+    </label>
+    <br>
+    <br>
+    <br>
+    <input type="submit" value="Login">
+  </form>
+  <h5><a href="#">Forgot password</a></h5>
+</section>

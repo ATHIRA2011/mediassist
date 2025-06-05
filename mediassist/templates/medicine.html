@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Medicine Upload Form | MediAssist</title>
+  <link rel="stylesheet" href="{% static 'css/medicine.css' %}" />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="title"><span>Upload Medicine</span></div>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <h3 style="color: rgb(225, 44, 44);">{{ msg }}</h3>
+      <h2>Medicine Entry</h2>
+
+      <div class="row">
+        <i class="fas fa-capsules"></i>
+        <input
+          type="text"
+          placeholder="Medicine Name"
+          name="pn"
+          required
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="row">
+        <i class="fas fa-rupee-sign"></i>
+        <input
+          type="number"
+          placeholder="Price"
+          name="pr"
+          min="0"
+          required
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="row">
+        <i class="fas fa-image"></i>
+        <input type="file" name="im" required />
+      </div>
+
+      <div class="row">
+        <i class="fas fa-align-left"></i>
+        <input
+          type="text"
+          placeholder="Description"
+          name="ds"
+          required
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="pass"><a href="#">Need Help?</a></div>
+
+      <div class="row button">
+        <input type="submit" value="Upload" />
+      </div>
+    </form>
+  </div>
+</body>
+</html>

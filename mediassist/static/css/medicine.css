@@ -1,0 +1,137 @@
+/* medicine.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(120deg, #74ebd5, #acb6e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 400px;
+  background: #fff;
+  padding: 40px 35px;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.wrapper h2 {
+  text-align: center;
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+form .row {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+form .row i {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  color: #999;
+  font-size: 16px;
+}
+
+form .row input[type='text'],
+form .row input[type='number'],
+form .row input[type='file'] {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border: 1.5px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+form .row input[type='file'] {
+  padding-left: 15px;
+}
+
+form .row input:focus {
+  border-color: #33aaff;
+  box-shadow: 0 0 8px rgba(51, 170, 255, 0.4);
+}
+
+.pass {
+  text-align: right;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.pass a {
+  color: #33aaff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pass a:hover {
+  text-decoration: underline;
+}
+
+.row.button input[type='submit'] {
+  width: 100%;
+  padding: 14px 0;
+  background-color: #33aaff;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.row.button input[type='submit']:hover {
+  background-color: #267fc1;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 450px) {
+  .wrapper {
+    width: 90%;
+    padding: 30px 20px;
+  }
+  form .row i {
+    top: 12px;
+    left: 12px;
+    font-size: 14px;
+  }
+  form .row input[type='text'],
+  form .row input[type='number'],
+  form .row input[type='file'] {
+    font-size: 14px;
+    padding-left: 40px;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .wrapper h2 {
+    font-size: 18px;
+  }
+}

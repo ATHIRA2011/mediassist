@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/medicineview.css' %}">
+{% if messages %}
+    {% for msg in messages %}
+        <h2 style="color: purple;">{{ msg }}</h2>
+    {% endfor %}
+{% endif %}
+
+{% for m in medicine %}
+<div class="card">
+    <img src="{{ m.pic.url }}" alt="Medicine Image">
+    <h1>{{ m.mnm }}</h1>
+    <h1>{{ m.prc }} Rs/-</h1>
+    <p>{{ m.des }}</p>
+</div>
+{% endfor %}

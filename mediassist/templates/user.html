@@ -1,0 +1,32 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/user.css' %}" />
+<table>
+    <caption>REGISTRATION</caption>
+      <tr>
+        <th>Full Name</th>
+        <th>Mobile Number</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Action</th>
+        <th>Action</th>
+        
+      </tr>
+
+      {% for m in data %}
+      <tr>
+        
+        <td>{{m.fnm}}</td>
+        <td>{{m.mob}}</td>
+        <td>{{m.eml}}</td>
+        <td>{{m.psw}}</td>
+        <td><a href="/edit/{{ m.id }}/" style="padding:5px 10px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:5px;">Edit</a></td>
+        <td><a href="/delete/{{ m.id }}/" style="padding:5px 10px; background-color:#f44336; color:white; text-decoration:none; border-radius:5px;">Delete</a></td>
+
+
+        
+
+        
+      </tr>
+      {% endfor %}
+    </table>
+      
